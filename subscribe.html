@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe to Our Mailing List</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #FAF3E0; color: #333;">
+    <div style="max-width: 600px; margin: 50px auto; padding: 20px; background-color: #FFFFFF; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <h1 style="text-align: center; color: #8B5E3C; font-size: 2.5rem; margin-bottom: 20px;">Subscribe to Our Mailing List</h1>
+        <p style="text-align: center; color: #555; font-size: 1rem; margin-bottom: 20px;">Stay updated with our latest news, hours, and special events by subscribing below!</p>
+        <form id="subscribeForm" style="display: flex; flex-direction: column; gap: 15px;">
+            <label for="name" style="font-size: 1.2rem; color: #8B5E3C;">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required style="padding: 10px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px;">
+
+            <label for="email" style="font-size: 1.2rem; color: #8B5E3C;">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required style="padding: 10px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px;">
+
+            <button type="submit" style="padding: 12px; font-size: 1.2rem; background-color: #8B5E3C; color: #FFFFFF; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+                Subscribe
+            </button>
+        </form>
+        <p style="text-align: center; font-size: 0.9rem; color: #777; margin-top: 20px;">
+            By subscribing, you agree to receive our periodic updates. You can unsubscribe at any time.
+        </p>
+    </div>
+    <script>
+        // Add hover effect for the button
+        const button = document.querySelector('button');
+        button.addEventListener('mouseover', () => {
+            button.style.backgroundColor = '#A16B4C';
+        });
+        button.addEventListener('mouseout', () => {
+            button.style.backgroundColor = '#8B5E3C';
+        });
+
+        // Handle the form submission and redirect after alert
+        const form = document.getElementById('subscribeForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the default form submission behavior
+            alert('Thank you for subscribing, come on down for 10% off!!'); // Display the alert
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>
+
+

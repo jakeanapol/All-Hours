@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation - All Hours Lounge</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Function to handle the scroll to the reservation form
+    function scrollToReservation() {
+      document.getElementById("reservation").scrollIntoView({behavior: 'smooth'});
+    }
+
+    // Handle form submission
+    function handleReservationSubmission(event) {
+      event.preventDefault();  // Prevent the default form submission
+      alert("Using a SMS API, user will recieve text with all Reservation info");
+      window.location.href = "index.html";  // Redirect to the homepage after submission
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menus.html">Menus</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="reserve.html">Reserve Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- Reservation Section - Restaurant Layout Image -->
+  <section id="layout-image-section">
+    <h2>Restaurant Layout</h2>
+    <img src="restaurant-layout.jpg" alt="Restaurant Layout"
+      style="max-width: 100%; height: auto; display: block; margin: 0 auto;" onclick="scrollToReservation()">
+  </section>
+
+  <!-- Reservation Form Section -->
+  <section id="reservation">
+    <h2>Reserve Now</h2>
+    <p>To reserve a table, please enter your details below:</p>
+    <form id="reservationForm" onsubmit="handleReservationSubmission(event)">
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="phone">Phone Number</label><br>
+      <input type="tel" id="phone" name="phone" required><br><br>
+      <label for="guests">Number of Guests</label><br>
+      <input type="number" id="guests" name="guests" required><br><br>
+      <button type="submit" class="submit-btn">Submit Reservation</button>
+    </form>
+  </section>
+
+</body>
+
+</html>
